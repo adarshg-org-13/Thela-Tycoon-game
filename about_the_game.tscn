@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7uca2061o5h5"]
+
+[ext_resource type="Texture2D" uid="uid://dccqxsrebwg1" path="res://Game images and assets/images/a_A_2D_pixel_art_game_.jpg" id="1_josx5"]
+[ext_resource type="FontFile" uid="uid://bah4drin3efnf" path="res://Game images and assets/font/upheavtt.ttf" id="2_73khv"]
+[ext_resource type="FontFile" uid="uid://c4blhgji8rcl3" path="res://Game images and assets/font/alagard.ttf" id="3_ikr3w"]
+[ext_resource type="Script" uid="uid://b1nnqfdsp20dt" path="res://back_button_cm.gd" id="4_pxxw8"]
+
+[node name="About the game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_josx5")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -165.0
+offset_top = 57.0
+offset_right = 165.0
+offset_bottom = 112.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_73khv")
+theme_override_font_sizes/font_size = 60
+text = "About the Game"
+
+[node name="Label2" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 84.0
+offset_top = 168.0
+offset_right = -75.0
+offset_bottom = -197.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_ikr3w")
+theme_override_font_sizes/font_size = 25
+text = "Thela Tycoon 2D is a casual 2D management game centered around the everyday hustle 
+of a parkside tea stall. You play as a small thela owner serving hot chai and simple street food 
+to a steady stream of park visitors. From early morning walkers to evening crowds, 
+each customer brings different preferences, timing, and challenges.
+
+The game focuses on resource management, quick decision-making, and gradual progression.
+ Players prepare orders, manage supplies, upgrade their stall, and expand the menu to keep
+ customers satisfied and profits growing. As the tea shop becomes more popular
+, the pace increases, testing efficiency and strategy.
+
+Set against a lively parkside backdrop, Thela Tycoon 2D captures the charm of 
+local street food culture in a simple, engaging format. It is designed to be easy 
+to pick up, relaxing to play,
+ and rewarding as your humble tea stall grows into a thriving neighborhood favorite."
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 22.0
+offset_top = -71.0
+offset_right = 122.0
+offset_bottom = -26.0
+grow_vertical = 0
+
+[node name="Back button" type="Button" parent="TextureRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ikr3w")
+theme_override_font_sizes/font_size = 35
+text = "-Back (esc)"
+script = ExtResource("4_pxxw8")
+
+[connection signal="pressed" from="TextureRect/VBoxContainer2/Back button" to="TextureRect/VBoxContainer2/Back button" method="_on_pressed"]
