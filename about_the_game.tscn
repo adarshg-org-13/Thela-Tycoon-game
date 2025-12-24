@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://c7uca2061o5h5"]
 
+[ext_resource type="Script" uid="uid://c6ta5emyo88k5" path="res://menu_common.gd" id="1_ikr3w"]
 [ext_resource type="Texture2D" uid="uid://dccqxsrebwg1" path="res://Game images and assets/images/a_A_2D_pixel_art_game_.jpg" id="1_josx5"]
 [ext_resource type="FontFile" uid="uid://bah4drin3efnf" path="res://Game images and assets/font/upheavtt.ttf" id="2_73khv"]
 [ext_resource type="FontFile" uid="uid://c4blhgji8rcl3" path="res://Game images and assets/font/alagard.ttf" id="3_ikr3w"]
-[ext_resource type="Script" uid="uid://b1nnqfdsp20dt" path="res://back_button_cm.gd" id="4_pxxw8"]
 
 [node name="About the game" type="Control"]
 layout_mode = 3
@@ -12,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ikr3w")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -81,6 +82,5 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_ikr3w")
 theme_override_font_sizes/font_size = 35
 text = "-Back (esc)"
-script = ExtResource("4_pxxw8")
 
-[connection signal="pressed" from="TextureRect/VBoxContainer2/Back button" to="TextureRect/VBoxContainer2/Back button" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer2/Back button" to="." method="_on_back_button_pressed"]

@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bcnf0twum13ue"]
 
 [ext_resource type="Texture2D" uid="uid://dccqxsrebwg1" path="res://Game images and assets/images/a_A_2D_pixel_art_game_.jpg" id="1_1sqh5"]
+[ext_resource type="Script" uid="uid://c6ta5emyo88k5" path="res://menu_common.gd" id="1_hnqsp"]
 [ext_resource type="FontFile" uid="uid://c4blhgji8rcl3" path="res://Game images and assets/font/alagard.ttf" id="2_hnqsp"]
-[ext_resource type="Script" uid="uid://b1nnqfdsp20dt" path="res://back_button_cm.gd" id="3_hnqsp"]
 [ext_resource type="FontFile" uid="uid://bah4drin3efnf" path="res://Game images and assets/font/upheavtt.ttf" id="3_k71r4"]
 
 [node name="Control_menu" type="Control"]
@@ -12,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_hnqsp")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -23,7 +24,7 @@ grow_vertical = 2
 texture = ExtResource("1_1sqh5")
 expand_mode = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect"]
+[node name="Game controls" type="VBoxContainer" parent="TextureRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -37,13 +38,13 @@ offset_bottom = 154.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="TextureRect/VBoxContainer"]
+[node name="Label" type="Label" parent="TextureRect/Game controls"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_hnqsp")
 theme_override_font_sizes/font_size = 55
 text = "Forward"
 
-[node name="Button" type="Button" parent="TextureRect/VBoxContainer/Label"]
+[node name="Button" type="Button" parent="TextureRect/Game controls/Label"]
 layout_mode = 0
 offset_left = 266.5
 offset_right = 311.5
@@ -51,13 +52,13 @@ offset_bottom = 43.0
 theme_override_font_sizes/font_size = 30
 text = "W"
 
-[node name="Label2" type="Label" parent="TextureRect/VBoxContainer"]
+[node name="Label2" type="Label" parent="TextureRect/Game controls"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_hnqsp")
 theme_override_font_sizes/font_size = 55
 text = "Backward"
 
-[node name="Button" type="Button" parent="TextureRect/VBoxContainer/Label2"]
+[node name="Button" type="Button" parent="TextureRect/Game controls/Label2"]
 layout_mode = 0
 offset_left = 266.5
 offset_right = 311.5
@@ -65,13 +66,13 @@ offset_bottom = 43.0
 theme_override_font_sizes/font_size = 30
 text = "S"
 
-[node name="Label3" type="Label" parent="TextureRect/VBoxContainer"]
+[node name="Label3" type="Label" parent="TextureRect/Game controls"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_hnqsp")
 theme_override_font_sizes/font_size = 55
 text = "Left"
 
-[node name="Button" type="Button" parent="TextureRect/VBoxContainer/Label3"]
+[node name="Button" type="Button" parent="TextureRect/Game controls/Label3"]
 layout_mode = 0
 offset_left = 266.5
 offset_right = 311.5
@@ -79,13 +80,13 @@ offset_bottom = 43.0
 theme_override_font_sizes/font_size = 30
 text = "A"
 
-[node name="Label4" type="Label" parent="TextureRect/VBoxContainer"]
+[node name="Label4" type="Label" parent="TextureRect/Game controls"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_hnqsp")
 theme_override_font_sizes/font_size = 55
 text = "Right"
 
-[node name="Button" type="Button" parent="TextureRect/VBoxContainer/Label4"]
+[node name="Button" type="Button" parent="TextureRect/Game controls/Label4"]
 layout_mode = 0
 offset_left = 266.5
 offset_right = 311.5
@@ -93,13 +94,13 @@ offset_bottom = 43.0
 theme_override_font_sizes/font_size = 30
 text = "D"
 
-[node name="Label5" type="Label" parent="TextureRect/VBoxContainer"]
+[node name="Label5" type="Label" parent="TextureRect/Game controls"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_hnqsp")
 theme_override_font_sizes/font_size = 55
 text = "Interact"
 
-[node name="Button" type="Button" parent="TextureRect/VBoxContainer/Label5"]
+[node name="Button" type="Button" parent="TextureRect/Game controls/Label5"]
 layout_mode = 0
 offset_left = 266.5
 offset_right = 311.5
@@ -107,13 +108,13 @@ offset_bottom = 43.0
 theme_override_font_sizes/font_size = 30
 text = "E"
 
-[node name="Label6" type="Label" parent="TextureRect/VBoxContainer"]
+[node name="Label6" type="Label" parent="TextureRect/Game controls"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_hnqsp")
 theme_override_font_sizes/font_size = 55
 text = "Run"
 
-[node name="Button" type="Button" parent="TextureRect/VBoxContainer/Label6"]
+[node name="Button" type="Button" parent="TextureRect/Game controls/Label6"]
 layout_mode = 0
 offset_left = 266.5
 offset_right = 311.5
@@ -132,12 +133,22 @@ offset_right = 122.0
 offset_bottom = -26.0
 grow_vertical = 0
 
-[node name="Back button" type="Button" parent="TextureRect/VBoxContainer2"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 22.0
+offset_top = -71.0
+offset_right = 122.0
+offset_bottom = -26.0
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="TextureRect/VBoxContainer3"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_hnqsp")
 theme_override_font_sizes/font_size = 35
 text = "-Back (esc)"
-script = ExtResource("3_hnqsp")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -156,4 +167,4 @@ theme_override_fonts/font = ExtResource("3_k71r4")
 theme_override_font_sizes/font_size = 65
 text = "Game Controls"
 
-[connection signal="pressed" from="TextureRect/VBoxContainer2/Back button" to="TextureRect/VBoxContainer2/Back button" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer3/Button" to="." method="_on_button_pressed"]

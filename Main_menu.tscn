@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cr20oue03ejc2"]
+[gd_scene load_steps=6 format=3 uid="uid://cr20oue03ejc2"]
 
+[ext_resource type="Script" uid="uid://bqa7riw5yxqmg" path="res://Scripts/main_menu_s.gd" id="1_5kukc"]
 [ext_resource type="Texture2D" uid="uid://dccqxsrebwg1" path="res://Game images and assets/images/a_A_2D_pixel_art_game_.jpg" id="1_x6lt7"]
 [ext_resource type="FontFile" uid="uid://c4blhgji8rcl3" path="res://Game images and assets/font/alagard.ttf" id="2_x2ps0"]
-[ext_resource type="Script" uid="uid://c11hl233f5nfn" path="res://settings_button.gd" id="3_8ovav"]
-[ext_resource type="Script" uid="uid://bndmm21l1ei66" path="res://quit_game_button.gd" id="3_rlxw3"]
 [ext_resource type="AudioStream" uid="uid://cf16ro8ymaq4c" path="res://Game images and assets/Music/platform-8-262410.mp3" id="5_5kukc"]
 [ext_resource type="FontFile" uid="uid://2wg3teg1g8cr" path="res://Game images and assets/font/Hello Valentina.ttf" id="5_8ovav"]
 
@@ -15,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_5kukc")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -51,14 +51,12 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_x2ps0")
 theme_override_font_sizes/font_size = 40
 text = "Settings"
-script = ExtResource("3_8ovav")
 
 [node name="Quit game button" type="Button" parent="TextureRect/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_x2ps0")
 theme_override_font_sizes/font_size = 40
 text = "Quit Game"
-script = ExtResource("3_rlxw3")
 
 [node name="Label" type="Label" parent="TextureRect"]
 layout_mode = 1
@@ -82,5 +80,5 @@ stream = ExtResource("5_5kukc")
 volume_db = -10.0
 autoplay = true
 
-[connection signal="pressed" from="TextureRect/VBoxContainer/Settings button" to="TextureRect/VBoxContainer/Settings button" method="_on_pressed"]
-[connection signal="pressed" from="TextureRect/VBoxContainer/Quit game button" to="TextureRect/VBoxContainer/Quit game button" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/Settings button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/Quit game button" to="." method="_on_quit_game_button_pressed"]
