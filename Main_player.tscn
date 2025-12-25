@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbgkab5y2dpnl"]
+
+[ext_resource type="Script" uid="uid://c88yd56j40ugm" path="res://Main_player_movement_s.gd" id="1_io2oc"]
+[ext_resource type="Texture2D" uid="uid://bd0px2xanfshg" path="res://Game images and assets/Player_img/b_A_32x32_pixel_art_sp-removebg-preview.png" id="2_a87kx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_io2oc"]
+radius = 15.0
+height = 82.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_io2oc")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(137.125, 164.5)
+scale = Vector2(0.1795, 0.18600005)
+texture = ExtResource("2_a87kx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(138, 164)
+shape = SubResource("CapsuleShape2D_io2oc")
