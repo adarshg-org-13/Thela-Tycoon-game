@@ -1,22 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbgkab5y2dpnl"]
+[gd_scene load_steps=6 format=3 uid="uid://dbgkab5y2dpnl"]
 
 [ext_resource type="Script" uid="uid://c88yd56j40ugm" path="res://Main_player_movement_s.gd" id="1_io2oc"]
-[ext_resource type="Texture2D" uid="uid://bd0px2xanfshg" path="res://Game images and assets/Player_img/b_A_32x32_pixel_art_sp-removebg-preview.png" id="2_a87kx"]
+[ext_resource type="Texture2D" uid="uid://blty8e08oy52f" path="res://Game images and assets/Player_img/Player sprite sheet ts 2d.png" id="2_io2oc"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_io2oc"]
-radius = 15.0
-height = 82.0
+[sub_resource type="AtlasTexture" id="AtlasTexture_a87kx"]
+atlas = ExtResource("2_io2oc")
+region = Rect2(56, 42, 100, 110)
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_cphpy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a87kx")
+}],
+"loop": true,
+"name": &"Idle animation",
+"speed": 10.0
+}]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ysa17"]
+radius = 26.0
+height = 100.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_io2oc")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(137.125, 164.5)
-scale = Vector2(0.1795, 0.18600005)
-texture = ExtResource("2_a87kx")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, -45)
+sprite_frames = SubResource("SpriteFrames_cphpy")
+animation = &"Idle animation"
+autoplay = "Idle animation"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(138, 164)
-shape = SubResource("CapsuleShape2D_io2oc")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -50)
+shape = SubResource("CapsuleShape2D_ysa17")

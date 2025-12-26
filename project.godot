@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Thela Tycoon 2D"
-run/main_scene="uid://dbgkab5y2dpnl"
+run/main_scene="uid://cr20oue03ejc2"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -56,3 +56,4 @@ run={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/main_scene="uid://cr20oue03ejc2"
