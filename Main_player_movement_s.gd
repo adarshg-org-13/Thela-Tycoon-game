@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const walk_speed = 200
-const run_speed = 350
+const walk_speed = 250
+const run_speed = 400
 
 var current_speed = walk_speed
 
