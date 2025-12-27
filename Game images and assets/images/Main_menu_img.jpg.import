@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7b4887nrgsrr"
-path="res://.godot/imported/fountain&bush.png-3b1b669b01bf4db95e375fbfe033b76e.ctex"
+uid="uid://dccqxsrebwg1"
+path="res://.godot/imported/Main_menu_img.jpg-6de791e4a93d899cd6d0472709473b7a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game images and assets/City assets/Main_city_tileset/fountain&bush.png"
-dest_files=["res://.godot/imported/fountain&bush.png-3b1b669b01bf4db95e375fbfe033b76e.ctex"]
+source_file="res://Game images and assets/images/Main_menu_img.jpg"
+dest_files=["res://.godot/imported/Main_menu_img.jpg-6de791e4a93d899cd6d0472709473b7a.ctex"]
 
 [params]
 

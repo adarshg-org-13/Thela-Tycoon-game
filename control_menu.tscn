@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bcnf0twum13ue"]
 
-[ext_resource type="Texture2D" uid="uid://dccqxsrebwg1" path="res://Game images and assets/images/a_A_2D_pixel_art_game_.jpg" id="1_1sqh5"]
+[ext_resource type="Texture2D" uid="uid://dccqxsrebwg1" path="res://Game images and assets/images/Main_menu_img.jpg" id="1_1sqh5"]
 [ext_resource type="Script" uid="uid://c6ta5emyo88k5" path="res://menu_common.gd" id="1_hnqsp"]
 [ext_resource type="FontFile" uid="uid://c4blhgji8rcl3" path="res://Game images and assets/font/alagard.ttf" id="2_hnqsp"]
 [ext_resource type="FontFile" uid="uid://bah4drin3efnf" path="res://Game images and assets/font/upheavtt.ttf" id="3_k71r4"]

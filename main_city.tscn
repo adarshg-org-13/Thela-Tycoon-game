@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://2o65c8n6r71o"]
+[gd_scene load_steps=9 format=3 uid="uid://2o65c8n6r71o"]
 
 [ext_resource type="Texture2D" uid="uid://bkm34j7w00w4k" path="res://Game images and assets/City assets/Main_city_tileset/road&lamps.png" id="1_xt4ne"]
 [ext_resource type="Texture2D" uid="uid://e8dhtrosjhp8" path="res://Game images and assets/City assets/Main_city_tileset/tea_stall.png" id="2_gpauo"]
 [ext_resource type="PackedScene" uid="uid://dbgkab5y2dpnl" path="res://Main_player.tscn" id="2_s0f1o"]
+[ext_resource type="AudioStream" uid="uid://rtjldcah0fo2" path="res://Game images and assets/Music/game_music.mp3" id="4_gpauo"]
+[ext_resource type="PackedScene" uid="uid://bnqyeluvtgk34" path="res://pause_menu.tscn" id="4_ue5yd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s0f1o"]
 texture = ExtResource("1_xt4ne")
@@ -2191,3 +2193,20 @@ layer_0/tile_data = PackedInt32Array(65477, 0, 56, 131013, 0, 57, 196549, 0, 58,
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(3, -67)
+
+[node name="Pause_menu" parent="CharacterBody2D/Camera2D" instance=ExtResource("4_ue5yd")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_gpauo")
+volume_db = -25.0
+pitch_scale = 0.83
+autoplay = true

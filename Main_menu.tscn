@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://cr20oue03ejc2"]
 
 [ext_resource type="Script" uid="uid://bqa7riw5yxqmg" path="res://Scripts/main_menu_s.gd" id="1_5kukc"]
-[ext_resource type="Texture2D" uid="uid://dccqxsrebwg1" path="res://Game images and assets/images/a_A_2D_pixel_art_game_.jpg" id="1_x6lt7"]
+[ext_resource type="Texture2D" uid="uid://dccqxsrebwg1" path="res://Game images and assets/images/Main_menu_img.jpg" id="1_x6lt7"]
 [ext_resource type="FontFile" uid="uid://c4blhgji8rcl3" path="res://Game images and assets/font/alagard.ttf" id="2_x2ps0"]
-[ext_resource type="AudioStream" uid="uid://cf16ro8ymaq4c" path="res://Game images and assets/Music/platform-8-262410.mp3" id="5_5kukc"]
+[ext_resource type="AudioStream" uid="uid://cf16ro8ymaq4c" path="res://Game images and assets/Music/Main_menu_music.mp3" id="5_5kukc"]
 [ext_resource type="FontFile" uid="uid://2wg3teg1g8cr" path="res://Game images and assets/font/Hello Valentina.ttf" id="5_8ovav"]
 
 [node name="Control" type="Control"]
@@ -79,6 +79,20 @@ text = "Thela Simulator 2D"
 stream = ExtResource("5_5kukc")
 volume_db = -10.0
 autoplay = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 603.0
+offset_top = -28.0
+offset_right = 1146.0
+offset_bottom = -9.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_x2ps0")
+theme_override_font_sizes/font_size = 18
+text = "*Restarting the game could result in the losing of game progress"
 
 [connection signal="pressed" from="TextureRect/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="TextureRect/VBoxContainer/Settings button" to="." method="_on_settings_button_pressed"]

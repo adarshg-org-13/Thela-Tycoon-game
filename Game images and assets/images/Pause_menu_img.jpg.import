@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db0ks0e3pjp7j"
-path="res://.godot/imported/ChatGPT Image Dec 23, 2025, 01_26_51 PM.png-6b478c504dd98e8ee35bd00e6d6f0d41.ctex"
+uid="uid://w7qcucmmsxtp"
+path="res://.godot/imported/Pause_menu_img.jpg-b3c106b5ae1d973a99b26a6ad058c588.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game images and assets/City assets/Main_city_tileset/ChatGPT Image Dec 23, 2025, 01_26_51 PM.png"
-dest_files=["res://.godot/imported/ChatGPT Image Dec 23, 2025, 01_26_51 PM.png-6b478c504dd98e8ee35bd00e6d6f0d41.ctex"]
+source_file="res://Game images and assets/images/Pause_menu_img.jpg"
+dest_files=["res://.godot/imported/Pause_menu_img.jpg-b3c106b5ae1d973a99b26a6ad058c588.ctex"]
 
 [params]
 
