@@ -79,6 +79,7 @@ text = "Thela Simulator 2D"
 stream = ExtResource("5_5kukc")
 volume_db = -10.0
 autoplay = true
+parameters/looping = true
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
