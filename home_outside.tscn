@@ -1,11 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://tyfc5m3egrqf"]
+[gd_scene load_steps=10 format=3 uid="uid://tyfc5m3egrqf"]
 
 [ext_resource type="Texture2D" uid="uid://b5rp2itxbhbig" path="res://Game images and assets/City assets/Main_city_tileset/House_outside.jpg" id="1_8idm6"]
 [ext_resource type="PackedScene" uid="uid://dbgkab5y2dpnl" path="res://Main_player.tscn" id="2_lah08"]
 [ext_resource type="PackedScene" uid="uid://bnqyeluvtgk34" path="res://pause_menu.tscn" id="3_htu5r"]
 [ext_resource type="FontFile" uid="uid://bah4drin3efnf" path="res://Game images and assets/font/upheavtt.ttf" id="4_htu5r"]
-[ext_resource type="Script" uid="uid://cmfosblkneu4c" path="res://scene_change_home_inside.gd" id="5_1hiov"]
-[ext_resource type="Script" uid="uid://r4bwg7to138h" path="res://scene_change_slum_area.gd" id="6_1hiov"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1hiov"]
 texture = ExtResource("1_8idm6")
@@ -8057,7 +8055,10 @@ sources/0 = SubResource("TileSetAtlasSource_1hiov")
 size = Vector2(825.0625, 2615)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hw5ln"]
-size = Vector2(2598, 418.125)
+size = Vector2(2598, 484.0625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hiov"]
+size = Vector2(178.25, 122)
 
 [node name="Home outside" type="Node2D"]
 
@@ -8069,10 +8070,10 @@ layer_0/tile_data = PackedInt32Array(-3014708, 0, 4, -2949172, 0, 5, -2883636, 0
 [node name="CharacterBody2D" parent="TileMap" instance=ExtResource("2_lah08")]
 position = Vector2(-647, 45)
 
-[node name="Camera2D" type="Camera2D" parent="TileMap/CharacterBody2D"]
+[node name="Camera2D2" type="Camera2D" parent="TileMap/CharacterBody2D"]
 position = Vector2(3, -67)
 
-[node name="Pause_menu" parent="TileMap/CharacterBody2D/Camera2D" instance=ExtResource("3_htu5r")]
+[node name="Pause_menu" parent="TileMap/CharacterBody2D/Camera2D2" instance=ExtResource("3_htu5r")]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -8095,14 +8096,18 @@ position = Vector2(1289, -963)
 shape = SubResource("RectangleShape2D_oxiq6")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Game boundary"]
-position = Vector2(33, 406)
+position = Vector2(25, 391)
 shape = SubResource("RectangleShape2D_hw5ln")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Game boundary"]
-position = Vector2(42, -460)
+position = Vector2(64, -355)
 shape = SubResource("RectangleShape2D_hw5ln")
 
-[node name="Button2" type="Button" parent="."]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Game boundary"]
+position = Vector2(-420.125, -20)
+shape = SubResource("RectangleShape2D_1hiov")
+
+[node name="Home_inside_button" type="Button" parent="."]
 offset_left = -116.0
 offset_top = -176.0
 offset_right = 10.0
@@ -8110,9 +8115,8 @@ offset_bottom = -132.0
 theme_override_fonts/font = ExtResource("4_htu5r")
 theme_override_font_sizes/font_size = 40
 text = "Enter"
-script = ExtResource("5_1hiov")
 
-[node name="Button" type="Button" parent="."]
+[node name="Slum area back button" type="Button" parent="."]
 offset_left = -813.0
 offset_top = -121.0
 offset_right = -635.0
@@ -8120,4 +8124,3 @@ offset_bottom = -67.0
 theme_override_fonts/font = ExtResource("4_htu5r")
 theme_override_font_sizes/font_size = 50
 text = "<-Slum"
-script = ExtResource("6_1hiov")

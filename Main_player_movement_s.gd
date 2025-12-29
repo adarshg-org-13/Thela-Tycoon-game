@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const WALK_SPEED = 250
-const RUN_SPEED = 400
+const WALK_SPEED = 280
+const RUN_SPEED = 450
 
 var current_speed = WALK_SPEED
 @onready var animated_sprite = $AnimatedSprite2D

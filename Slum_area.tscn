@@ -4,8 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://dbgkab5y2dpnl" path="res://Main_player.tscn" id="2_0377k"]
 [ext_resource type="FontFile" uid="uid://bah4drin3efnf" path="res://Game images and assets/font/upheavtt.ttf" id="3_lfrp0"]
 [ext_resource type="PackedScene" uid="uid://bnqyeluvtgk34" path="res://pause_menu.tscn" id="3_w857l"]
-[ext_resource type="Script" uid="uid://b231xf3hc7fxv" path="res://scene_change_city_area.gd" id="4_emfqp"]
-[ext_resource type="Script" uid="uid://bxmnp3iv6h78r" path="res://scene_change_house.gd" id="5_0377k"]
 [ext_resource type="AudioStream" uid="uid://rtjldcah0fo2" path="res://Game images and assets/Music/game_music.mp3" id="7_w857l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8xcue"]
@@ -9622,6 +9620,12 @@ size = Vector2(825.0625, 2615)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w857l"]
 size = Vector2(2598, 272.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8xcue"]
+size = Vector2(687.5, 502.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_twxc7"]
+size = Vector2(1596, 101.5)
+
 [node name="Slum area" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -9647,7 +9651,7 @@ offset_top = -324.0
 offset_right = 576.0
 offset_bottom = 324.0
 
-[node name="Button" type="Button" parent="."]
+[node name="City button" type="Button" parent="."]
 offset_left = -692.0
 offset_top = 14.0
 offset_right = -514.0
@@ -9655,9 +9659,8 @@ offset_bottom = 68.0
 theme_override_fonts/font = ExtResource("3_lfrp0")
 theme_override_font_sizes/font_size = 50
 text = "<-City"
-script = ExtResource("4_emfqp")
 
-[node name="Button2" type="Button" parent="."]
+[node name="Home outside button" type="Button" parent="."]
 offset_left = 57.0
 offset_top = -380.0
 offset_right = 165.0
@@ -9665,7 +9668,6 @@ offset_bottom = -336.0
 theme_override_fonts/font = ExtResource("3_lfrp0")
 theme_override_font_sizes/font_size = 40
 text = "Home"
-script = ExtResource("5_0377k")
 
 [node name="Game boundary" type="StaticBody2D" parent="."]
 
@@ -9684,6 +9686,18 @@ shape = SubResource("RectangleShape2D_w857l")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Game boundary"]
 position = Vector2(56, -647)
 shape = SubResource("RectangleShape2D_w857l")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Game boundary"]
+position = Vector2(-356, -157)
+shape = SubResource("RectangleShape2D_8xcue")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Game boundary"]
+position = Vector2(558, -148)
+shape = SubResource("RectangleShape2D_8xcue")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Game boundary"]
+position = Vector2(94, -448.75)
+shape = SubResource("RectangleShape2D_twxc7")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_w857l")
