@@ -1,0 +1,122 @@
+[gd_scene load_steps=9 format=3 uid="uid://dlhuwq83ucc4r"]
+
+[ext_resource type="Script" uid="uid://b86bc3pflerie" path="res://scene_shop.gd" id="1_jn2a4"]
+[ext_resource type="Texture2D" uid="uid://bvu527u2xgkn4" path="res://Game images and assets/City assets/Main_city_tileset/a_Generate_a_image_of_ (5).jpg" id="1_lif0o"]
+[ext_resource type="Texture2D" uid="uid://dxex0nq81ke52" path="res://Game images and assets/City assets/Main_city_tileset/bg1.webp" id="2_7w5pk"]
+[ext_resource type="Texture2D" uid="uid://ielg5v3ke0ao" path="res://Game images and assets/City assets/Main_city_tileset/b_Generate_a_image_of___6_-removebg-preview.png" id="3_winei"]
+[ext_resource type="FontFile" uid="uid://c4blhgji8rcl3" path="res://Game images and assets/font/alagard.ttf" id="4_orjyk"]
+[ext_resource type="Texture2D" uid="uid://wgd3folj8m60" path="res://Game images and assets/City assets/Main_city_tileset/b_generate_a_image_of___2_-removebg-preview.png" id="5_jn2a4"]
+[ext_resource type="Texture2D" uid="uid://c1ai1sonxy6l8" path="res://Game images and assets/City assets/Main_city_tileset/b_Generate_a_image_of___3_-removebg-preview.png" id="6_0x1kr"]
+[ext_resource type="FontFile" uid="uid://bah4drin3efnf" path="res://Game images and assets/font/upheavtt.ttf" id="8_0x1kr"]
+
+[node name="Milk_shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jn2a4")
+
+[node name="Bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lif0o")
+expand_mode = 1
+
+[node name="Main button contianer" type="TextureRect" parent="Bg"]
+modulate = Color(0, 0, 0, 0.43137255)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.84375
+offset_top = -176.3125
+offset_right = 440.84375
+offset_bottom = 216.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_7w5pk")
+expand_mode = 1
+
+[node name="Milk 500ml" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 200.0
+offset_right = 472.0
+offset_bottom = 469.0
+texture = ExtResource("3_winei")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="Milk 500ml"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 238.0
+offset_right = 259.0
+offset_bottom = 304.0
+theme_override_fonts/font = ExtResource("4_orjyk")
+theme_override_font_sizes/font_size = 40
+text = "₹30"
+
+[node name="Milk 1 litre" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -170.0
+offset_right = 190.0
+offset_bottom = 155.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_jn2a4")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="Milk 1 litre"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 285.0
+offset_right = 268.0
+offset_bottom = 348.0
+theme_override_fonts/font = ExtResource("4_orjyk")
+theme_override_font_sizes/font_size = 40
+text = "₹55"
+
+[node name="Milk 2litre" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 694.0
+offset_top = 170.0
+offset_right = 1030.0
+offset_bottom = 446.0
+texture = ExtResource("6_0x1kr")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="Milk 2litre"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 272.0
+offset_right = 252.0
+offset_bottom = 335.0
+theme_override_fonts/font = ExtResource("4_orjyk")
+theme_override_font_sizes/font_size = 40
+text = "₹100"
+
+[node name="Esc MS" type="Button" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 133.0
+offset_bottom = 53.0
+theme_override_fonts/font = ExtResource("8_0x1kr")
+theme_override_font_sizes/font_size = 30
+text = "Esc"
+
+[connection signal="pressed" from="Esc MS" to="." method="_on_esc_ms_pressed"]

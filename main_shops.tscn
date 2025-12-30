@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://2cqsia2ona1c"]
+[gd_scene load_steps=32 format=3 uid="uid://2cqsia2ona1c"]
 
 [ext_resource type="Texture2D" uid="uid://bkm34j7w00w4k" path="res://Game images and assets/City assets/Main_city_tileset/road&lamps.png" id="1_0l1bt"]
 [ext_resource type="Texture2D" uid="uid://chfbq14kq1hsf" path="res://Game images and assets/City assets/Main_city_tileset/milk_shop.png" id="2_q6p7s"]
@@ -40139,7 +40139,7 @@ texture = ExtResource("3_qvm2c")
 sources/0 = SubResource("TileSetAtlasSource_jhih4")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l4phx"]
-size = Vector2(878, 3116.75)
+size = Vector2(1076, 3116.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nmase"]
 size = Vector2(2965, 270)
@@ -40151,7 +40151,10 @@ radius = 93.0
 radius = 43.104523
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3t28e"]
-size = Vector2(229, 276.5)
+size = Vector2(260.5, 276.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3t28e"]
+radius = 111.07205
 
 [node name="Main_shops" type="Node2D"]
 
@@ -40185,11 +40188,11 @@ layer_0/tile_data = PackedInt32Array(-2883631, 0, 0, -2818095, 0, 1, -2752559, 0
 [node name="Game boundary" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Game boundary"]
-position = Vector2(-454, -1355.25)
+position = Vector2(-550, -1236)
 shape = SubResource("RectangleShape2D_l4phx")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Game boundary"]
-position = Vector2(3165, -1322.625)
+position = Vector2(3306, -1323)
 shape = SubResource("RectangleShape2D_l4phx")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Game boundary"]
@@ -40201,7 +40204,7 @@ position = Vector2(1458, -331)
 shape = SubResource("RectangleShape2D_nmase")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Game boundary"]
-position = Vector2(908, -95)
+position = Vector2(961, -91)
 shape = SubResource("CircleShape2D_kv7df")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Game boundary"]
@@ -40245,3 +40248,30 @@ target_scene = "uid://2o65c8n6r71o"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-23, 99)
 shape = SubResource("RectangleShape2D_3t28e")
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(140, -32)
+script = ExtResource("11_aoqwl")
+target_scene = "uid://cqo3rjsuf6p2e"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(441, -53)
+shape = SubResource("CircleShape2D_3t28e")
+
+[node name="Area2D3" type="Area2D" parent="."]
+position = Vector2(140, -32)
+script = ExtResource("11_aoqwl")
+target_scene = "uid://dlhuwq83ucc4r"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2(1257, -42)
+shape = SubResource("CircleShape2D_3t28e")
+
+[node name="Area2D4" type="Area2D" parent="."]
+position = Vector2(140, -32)
+script = ExtResource("11_aoqwl")
+target_scene = "uid://bp1dpd4x81m8j"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
+position = Vector2(2408, -38)
+shape = SubResource("CircleShape2D_3t28e")

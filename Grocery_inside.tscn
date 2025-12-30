@@ -1,0 +1,175 @@
+[gd_scene load_steps=12 format=3 uid="uid://sfcugapc7wr7"]
+
+[ext_resource type="Texture2D" uid="uid://db38x1ww558hl" path="res://Game images and assets/City assets/Main_city_tileset/a_Regenerate_this_imag.jpeg" id="1_qrofm"]
+[ext_resource type="Script" uid="uid://b86bc3pflerie" path="res://scene_shop.gd" id="1_vyuva"]
+[ext_resource type="Texture2D" uid="uid://dxex0nq81ke52" path="res://Game images and assets/City assets/Main_city_tileset/bg1.webp" id="2_oqcvm"]
+[ext_resource type="Texture2D" uid="uid://cd6m4n2utwbfn" path="res://Game images and assets/City assets/Main_city_tileset/b_Generate_a_image_of___4_-removebg-preview.png" id="3_gdu3b"]
+[ext_resource type="FontFile" uid="uid://c4blhgji8rcl3" path="res://Game images and assets/font/alagard.ttf" id="4_vyuva"]
+[ext_resource type="Texture2D" uid="uid://c1r4nleb0l3ye" path="res://Game images and assets/City assets/Main_city_tileset/b_generate_a_image_of___5_-removebg-preview.png" id="5_sucbs"]
+[ext_resource type="Texture2D" uid="uid://bd306li16tieh" path="res://Game images and assets/City assets/Main_city_tileset/a_Generate_a_image_of_-removebg-preview.png" id="6_2lhr4"]
+[ext_resource type="Texture2D" uid="uid://bwcix12w2x0wy" path="res://Game images and assets/City assets/Main_city_tileset/a_Generate_a_image_of___1_-removebg-preview.png" id="7_bdsfc"]
+[ext_resource type="Texture2D" uid="uid://pyhjr1i2i3lj" path="res://Game images and assets/City assets/Main_city_tileset/a_Generate_a_image_of___2_-removebg-preview.png" id="8_q07do"]
+[ext_resource type="Texture2D" uid="uid://ovso0b3kx5ay" path="res://Game images and assets/City assets/Main_city_tileset/b_Generate_a_image_of___1_-removebg-preview.png" id="9_lwyse"]
+[ext_resource type="FontFile" uid="uid://bah4drin3efnf" path="res://Game images and assets/font/upheavtt.ttf" id="10_gdu3b"]
+
+[node name="Grocery" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vyuva")
+
+[node name="Map" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_qrofm")
+expand_mode = 1
+
+[node name="Main button contianer" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 0.43137255)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -446.6875
+offset_top = -267.25
+offset_right = 446.6875
+offset_bottom = 267.25
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_oqcvm")
+expand_mode = 1
+
+[node name="Tea 500g" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 82.0
+offset_right = 361.0
+offset_bottom = 297.0
+texture = ExtResource("3_gdu3b")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="Tea 500g"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 203.0
+offset_right = 189.0
+offset_bottom = 247.0
+theme_override_fonts/font = ExtResource("4_vyuva")
+theme_override_font_sizes/font_size = 30
+text = "₹200"
+
+[node name="Tea 1kg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 415.0
+offset_top = 70.0
+offset_right = 692.0
+offset_bottom = 333.0
+texture = ExtResource("5_sucbs")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="Tea 1kg"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 215.0
+offset_right = 214.0
+offset_bottom = 264.0
+theme_override_fonts/font = ExtResource("4_vyuva")
+theme_override_font_sizes/font_size = 30
+text = "₹350"
+
+[node name="Samosa" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 721.0
+offset_top = 82.0
+offset_right = 965.0
+offset_bottom = 302.0
+texture = ExtResource("6_2lhr4")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="Samosa"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 203.0
+offset_right = 206.0
+offset_bottom = 252.0
+theme_override_fonts/font = ExtResource("4_vyuva")
+theme_override_font_sizes/font_size = 30
+text = "₹15"
+
+[node name="Samosa 3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 334.0
+offset_right = 355.0
+offset_bottom = 539.0
+texture = ExtResource("7_bdsfc")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="Samosa 3"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 195.0
+offset_right = 183.0
+offset_bottom = 244.0
+theme_override_fonts/font = ExtResource("4_vyuva")
+theme_override_font_sizes/font_size = 30
+text = "₹40"
+
+[node name="Biscuit packet" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 401.0
+offset_top = 296.0
+offset_right = 731.0
+offset_bottom = 599.0
+texture = ExtResource("8_q07do")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="Biscuit packet"]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 218.0
+offset_right = 252.0
+offset_bottom = 273.0
+theme_override_fonts/font = ExtResource("4_vyuva")
+theme_override_font_sizes/font_size = 30
+text = "₹50"
+
+[node name="Biscuit packet 3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 761.0
+offset_top = 362.0
+offset_right = 954.0
+offset_bottom = 530.0
+texture = ExtResource("9_lwyse")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="Biscuit packet 3"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 156.0
+offset_right = 186.0
+offset_bottom = 205.0
+theme_override_fonts/font = ExtResource("4_vyuva")
+theme_override_font_sizes/font_size = 30
+text = "₹20"
+
+[node name="Esc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 133.0
+offset_bottom = 53.0
+theme_override_fonts/font = ExtResource("10_gdu3b")
+theme_override_font_sizes/font_size = 30
+text = "Esc"
+
+[connection signal="pressed" from="Esc" to="." method="_on_esc_pressed"]
