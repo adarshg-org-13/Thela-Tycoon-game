@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5f2d43oe8u1w"
-path="res://.godot/imported/sky.png-5b2105db8e3cb66c1afed7b9bb379ff0.ctex"
+uid="uid://cyifmuu52t06j"
+path="res://.godot/imported/houses1.png-f77e867db1b1f428b651e706f1475cd5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game images and assets/City assets/Main_city_tileset/sky.png"
-dest_files=["res://.godot/imported/sky.png-5b2105db8e3cb66c1afed7b9bb379ff0.ctex"]
+source_file="res://Game images and assets/City assets/Main_city_tileset/houses1.png"
+dest_files=["res://.godot/imported/houses1.png-f77e867db1b1f428b651e706f1475cd5.ctex"]
 
 [params]
 

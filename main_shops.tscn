@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://2cqsia2ona1c"]
+[gd_scene load_steps=33 format=3 uid="uid://2cqsia2ona1c"]
 
 [ext_resource type="Texture2D" uid="uid://bkm34j7w00w4k" path="res://Game images and assets/City assets/Main_city_tileset/road&lamps.png" id="1_0l1bt"]
 [ext_resource type="Texture2D" uid="uid://chfbq14kq1hsf" path="res://Game images and assets/City assets/Main_city_tileset/milk_shop.png" id="2_q6p7s"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bl2e2oo3ruddd" path="res://Game images and assets/City assets/Main_city_tileset/back.png" id="4_ouskn"]
 [ext_resource type="Texture2D" uid="uid://cj6glfm2kuwq6" path="res://Game images and assets/City assets/Main_city_tileset/houses3.png" id="7_jyrh3"]
 [ext_resource type="PackedScene" uid="uid://dbgkab5y2dpnl" path="res://Main_player.tscn" id="8_jyrh3"]
+[ext_resource type="Script" uid="uid://c80x366x1eeea" path="res://camera_script.gd" id="9_aoqwl"]
 [ext_resource type="PackedScene" uid="uid://bnqyeluvtgk34" path="res://pause_menu.tscn" id="9_emj2r"]
 [ext_resource type="Script" uid="uid://o2w7kat3snnf" path="res://scene_change_script.gd" id="11_aoqwl"]
 [ext_resource type="FontFile" uid="uid://bah4drin3efnf" path="res://Game images and assets/font/upheavtt.ttf" id="11_kv7df"]
@@ -40212,10 +40213,12 @@ position = Vector2(1171, -64)
 shape = SubResource("CircleShape2D_aoqwl")
 
 [node name="Main_player" parent="." groups=["player"] instance=ExtResource("8_jyrh3")]
-position = Vector2(53, 114)
+position = Vector2(567, 199)
 
-[node name="Camera2D2" type="Camera2D" parent="Main_player"]
+[node name="Camera2D2" type="Camera2D" parent="Main_player" node_paths=PackedStringArray("tilemap")]
 position = Vector2(3, -67)
+script = ExtResource("9_aoqwl")
+tilemap = NodePath("../../base")
 
 [node name="Pause_menu" parent="Main_player/Camera2D2" instance=ExtResource("9_emj2r")]
 visible = false
@@ -40246,7 +40249,7 @@ script = ExtResource("11_aoqwl")
 target_scene = "uid://2o65c8n6r71o"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-23, 99)
+position = Vector2(-27, 191)
 shape = SubResource("RectangleShape2D_3t28e")
 
 [node name="Area2D2" type="Area2D" parent="."]

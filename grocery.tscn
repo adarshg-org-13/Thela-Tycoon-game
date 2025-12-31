@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://cd6m4n2utwbfn" path="res://Game images and assets/City assets/Main_city_tileset/b_Generate_a_image_of___4_-removebg-preview.png" id="4_6va6c"]
 [ext_resource type="FontFile" uid="uid://c4blhgji8rcl3" path="res://Game images and assets/font/alagard.ttf" id="5_033le"]
 [ext_resource type="Texture2D" uid="uid://c1r4nleb0l3ye" path="res://Game images and assets/City assets/Main_city_tileset/b_generate_a_image_of___5_-removebg-preview.png" id="6_51xn3"]
-[ext_resource type="Texture2D" uid="uid://bd306li16tieh" path="res://Game images and assets/City assets/Main_city_tileset/a_Generate_a_image_of_-removebg-preview.png" id="7_ab3rq"]
-[ext_resource type="Texture2D" uid="uid://bwcix12w2x0wy" path="res://Game images and assets/City assets/Main_city_tileset/a_Generate_a_image_of___1_-removebg-preview.png" id="8_cx633"]
+[ext_resource type="Texture2D" uid="uid://di30u3ruvnxuh" path="res://Game images and assets/City assets/Main_city_tileset/b_Generate_a_image_of___5_-removebg-preview (1).png" id="7_v2fsu"]
+[ext_resource type="Texture2D" uid="uid://bp2k73tx2arfu" path="res://Game images and assets/City assets/Main_city_tileset/b_Generate_a_image_of___7_-removebg-preview.png" id="8_v2fsu"]
 [ext_resource type="Texture2D" uid="uid://pyhjr1i2i3lj" path="res://Game images and assets/City assets/Main_city_tileset/a_Generate_a_image_of___2_-removebg-preview.png" id="9_lqnch"]
 [ext_resource type="Texture2D" uid="uid://ovso0b3kx5ay" path="res://Game images and assets/City assets/Main_city_tileset/b_Generate_a_image_of___1_-removebg-preview.png" id="10_f1phc"]
 [ext_resource type="FontFile" uid="uid://bah4drin3efnf" path="res://Game images and assets/font/upheavtt.ttf" id="11_er5yg"]
@@ -70,32 +70,32 @@ text = "₹200"
 [node name="Tea 1kg" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 415.0
-offset_top = 70.0
-offset_right = 692.0
-offset_bottom = 333.0
+offset_top = 56.0
+offset_right = 713.0
+offset_bottom = 313.0
 texture = ExtResource("6_51xn3")
 expand_mode = 1
 
 [node name="Button" type="Button" parent="Tea 1kg"]
 layout_mode = 0
-offset_left = 62.0
-offset_top = 215.0
-offset_right = 214.0
-offset_bottom = 264.0
+offset_left = 67.0
+offset_top = 229.0
+offset_right = 237.0
+offset_bottom = 288.0
 theme_override_fonts/font = ExtResource("5_033le")
 theme_override_font_sizes/font_size = 30
 text = "₹350"
 
-[node name="Samosa" type="TextureRect" parent="."]
+[node name="Sugar 500g" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 721.0
 offset_top = 82.0
 offset_right = 965.0
 offset_bottom = 302.0
-texture = ExtResource("7_ab3rq")
+texture = ExtResource("7_v2fsu")
 expand_mode = 1
 
-[node name="Button" type="Button" parent="Samosa"]
+[node name="Button" type="Button" parent="Sugar 500g"]
 layout_mode = 0
 offset_left = 54.0
 offset_top = 203.0
@@ -103,18 +103,18 @@ offset_right = 206.0
 offset_bottom = 252.0
 theme_override_fonts/font = ExtResource("5_033le")
 theme_override_font_sizes/font_size = 30
-text = "₹15"
+text = "₹50"
 
-[node name="Samosa 3" type="TextureRect" parent="."]
+[node name="Sugar 1kg" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 142.0
 offset_top = 334.0
-offset_right = 355.0
-offset_bottom = 539.0
-texture = ExtResource("8_cx633")
+offset_right = 359.0
+offset_bottom = 541.0
+texture = ExtResource("8_v2fsu")
 expand_mode = 1
 
-[node name="Button" type="Button" parent="Samosa 3"]
+[node name="Button" type="Button" parent="Sugar 1kg"]
 layout_mode = 0
 offset_left = 31.0
 offset_top = 195.0
@@ -122,23 +122,23 @@ offset_right = 183.0
 offset_bottom = 244.0
 theme_override_fonts/font = ExtResource("5_033le")
 theme_override_font_sizes/font_size = 30
-text = "₹40"
+text = "₹90"
 
 [node name="Biscuit packet" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 401.0
-offset_top = 296.0
-offset_right = 731.0
-offset_bottom = 599.0
+offset_left = 450.0
+offset_top = 342.0
+offset_right = 694.0
+offset_bottom = 541.0
 texture = ExtResource("9_lqnch")
 expand_mode = 1
 
 [node name="Button" type="Button" parent="Biscuit packet"]
 layout_mode = 0
-offset_left = 84.0
-offset_top = 218.0
-offset_right = 252.0
-offset_bottom = 273.0
+offset_left = 49.0
+offset_top = 174.0
+offset_right = 217.0
+offset_bottom = 229.0
 theme_override_fonts/font = ExtResource("5_033le")
 theme_override_font_sizes/font_size = 30
 text = "₹50"

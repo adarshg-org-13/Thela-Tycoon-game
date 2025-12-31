@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://dkk2h44apwj6d"]
+[gd_scene load_steps=16 format=3 uid="uid://dkk2h44apwj6d"]
 
 [ext_resource type="Texture2D" uid="uid://cype4obmoq4xq" path="res://Game images and assets/City assets/Main_city_tileset/Slum_area.jpg" id="1_emfqp"]
 [ext_resource type="PackedScene" uid="uid://dbgkab5y2dpnl" path="res://Main_player.tscn" id="2_0377k"]
+[ext_resource type="Script" uid="uid://c80x366x1eeea" path="res://camera_script.gd" id="3_8xcue"]
 [ext_resource type="FontFile" uid="uid://bah4drin3efnf" path="res://Game images and assets/font/upheavtt.ttf" id="3_lfrp0"]
 [ext_resource type="PackedScene" uid="uid://bnqyeluvtgk34" path="res://pause_menu.tscn" id="3_w857l"]
 [ext_resource type="Script" uid="uid://o2w7kat3snnf" path="res://scene_change_script.gd" id="6_lfrp0"]
@@ -9641,8 +9642,10 @@ layer_0/tile_data = PackedInt32Array(-1966124, 720896, 13, -1900588, 720896, 14,
 [node name="Main_player" parent="TileMap" groups=["player"] instance=ExtResource("2_0377k")]
 position = Vector2(-521, 202)
 
-[node name="Camera2D2" type="Camera2D" parent="TileMap/Main_player"]
+[node name="Camera2D2" type="Camera2D" parent="TileMap/Main_player" node_paths=PackedStringArray("tilemap")]
 position = Vector2(3, -67)
+script = ExtResource("3_8xcue")
+tilemap = NodePath("../..")
 
 [node name="Pause_menu" parent="TileMap/Main_player/Camera2D2" instance=ExtResource("3_w857l")]
 visible = false

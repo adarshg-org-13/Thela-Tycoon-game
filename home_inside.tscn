@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://bbp20k65swo3h"]
+[gd_scene load_steps=18 format=3 uid="uid://bbp20k65swo3h"]
 
 [ext_resource type="Texture2D" uid="uid://b5w41utl68urn" path="res://Game images and assets/City assets/Main_city_tileset/House_inside.jpg" id="1_ardkd"]
 [ext_resource type="PackedScene" uid="uid://dbgkab5y2dpnl" path="res://Main_player.tscn" id="2_ua0mk"]
 [ext_resource type="PackedScene" uid="uid://bnqyeluvtgk34" path="res://pause_menu.tscn" id="3_keixp"]
+[ext_resource type="Script" uid="uid://c80x366x1eeea" path="res://camera_script.gd" id="3_x7x43"]
 [ext_resource type="FontFile" uid="uid://bah4drin3efnf" path="res://Game images and assets/font/upheavtt.ttf" id="4_keixp"]
 [ext_resource type="Script" uid="uid://c5ed1f3tnrrd0" path="res://scene_change_script2.gd" id="5_keixp"]
 
@@ -8089,8 +8090,10 @@ layer_0/tile_data = PackedInt32Array(-3145780, 65536, 8, -3080244, 65536, 9, -30
 [node name="Main_player" parent="TileMap" groups=["player"] instance=ExtResource("2_ua0mk")]
 position = Vector2(-328, 120)
 
-[node name="Camera2D2" type="Camera2D" parent="TileMap/Main_player"]
+[node name="Camera2D2" type="Camera2D" parent="TileMap/Main_player" node_paths=PackedStringArray("tilemap")]
 position = Vector2(3, -67)
+script = ExtResource("3_x7x43")
+tilemap = NodePath("../..")
 
 [node name="Pause_menu" parent="TileMap/Main_player/Camera2D2" instance=ExtResource("3_keixp")]
 visible = false

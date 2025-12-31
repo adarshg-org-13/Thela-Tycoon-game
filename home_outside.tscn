@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://tyfc5m3egrqf"]
+[gd_scene load_steps=15 format=3 uid="uid://tyfc5m3egrqf"]
 
 [ext_resource type="Texture2D" uid="uid://b5rp2itxbhbig" path="res://Game images and assets/City assets/Main_city_tileset/House_outside.jpg" id="1_8idm6"]
 [ext_resource type="PackedScene" uid="uid://dbgkab5y2dpnl" path="res://Main_player.tscn" id="2_lah08"]
 [ext_resource type="PackedScene" uid="uid://bnqyeluvtgk34" path="res://pause_menu.tscn" id="3_htu5r"]
+[ext_resource type="Script" uid="uid://c80x366x1eeea" path="res://camera_script.gd" id="3_y8i6q"]
 [ext_resource type="FontFile" uid="uid://bah4drin3efnf" path="res://Game images and assets/font/upheavtt.ttf" id="4_htu5r"]
 [ext_resource type="Script" uid="uid://o2w7kat3snnf" path="res://scene_change_script.gd" id="5_htu5r"]
 [ext_resource type="Script" uid="uid://c5ed1f3tnrrd0" path="res://scene_change_script2.gd" id="6_1hiov"]
@@ -8078,8 +8079,10 @@ layer_0/tile_data = PackedInt32Array(-3014708, 0, 4, -2949172, 0, 5, -2883636, 0
 [node name="Main_player" parent="TileMap" groups=["player"] instance=ExtResource("2_lah08")]
 position = Vector2(-732, 51)
 
-[node name="Camera2D2" type="Camera2D" parent="TileMap/Main_player"]
+[node name="Camera2D2" type="Camera2D" parent="TileMap/Main_player" node_paths=PackedStringArray("tilemap")]
 position = Vector2(3, -67)
+script = ExtResource("3_y8i6q")
+tilemap = NodePath("../..")
 
 [node name="Pause_menu" parent="TileMap/Main_player/Camera2D2" instance=ExtResource("3_htu5r")]
 visible = false
