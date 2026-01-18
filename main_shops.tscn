@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bkm34j7w00w4k" path="res://Game images and assets/City assets/Main_city_tileset/road&lamps.png" id="1_0l1bt"]
 [ext_resource type="Texture2D" uid="uid://chfbq14kq1hsf" path="res://Game images and assets/City assets/Main_city_tileset/milk_shop.png" id="2_q6p7s"]
 [ext_resource type="Texture2D" uid="uid://dl7jrjv743ad2" path="res://Game images and assets/City assets/Main_city_tileset/Grocery_shop.png" id="3_q6p7s"]
-[ext_resource type="Texture2D" uid="uid://b5f2d43oe8u1w" path="res://Game images and assets/City assets/Main_city_tileset/Sky.png" id="3_qvm2c"]
+[ext_resource type="Texture2D" uid="uid://b5f2d43oe8u1w" path="res://Game images and assets/City assets/Main_city_tileset/sky.png" id="3_qvm2c"]
 [ext_resource type="Texture2D" uid="uid://cg877ckly1usy" path="res://Game images and assets/City assets/Main_city_tileset/Water_shop.png" id="4_kadxe"]
 [ext_resource type="Texture2D" uid="uid://bl2e2oo3ruddd" path="res://Game images and assets/City assets/Main_city_tileset/back.png" id="4_ouskn"]
 [ext_resource type="Texture2D" uid="uid://cj6glfm2kuwq6" path="res://Game images and assets/City assets/Main_city_tileset/houses3.png" id="7_jyrh3"]
